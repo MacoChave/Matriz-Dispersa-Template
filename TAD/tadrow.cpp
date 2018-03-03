@@ -15,6 +15,11 @@ TADRow::~TADRow()
     j = 0;
 }
 
+int TADRow::getJ()
+{
+    return j;
+}
+
 int TADRow::compare(TADRow *row)
 {
     if (j > row->getJ())

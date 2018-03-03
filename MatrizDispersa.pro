@@ -19,4 +19,5 @@ HEADERS += \
     Cabeceras/row.h \
     Cabeceras/column.h \
     TAD/tadrow.h \
-    TAD/tadcolumn.h
+    TAD/tadcolumn.h \
+    Matriz/matrixnode.h

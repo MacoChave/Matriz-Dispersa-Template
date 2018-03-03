@@ -9,7 +9,7 @@ class List
     Node<T> *head;
     Node<T> *tail;
 
-    Node<T> insert(Node<T> *current, T value);
+    Node<T> *insert(Node<T> *current, T value);
     Node<T> *get(Node<T> *current, T value);
 public:
     List();
@@ -22,11 +22,11 @@ public:
     void clear();
 
     /* MODIFICADORES */
-    Node<T> push_front(T value);
-    Node<T> push_back(T value);
+    Node<T> *push_front(T value);
+    Node<T> *push_back(T value);
     void pop_front();
     void pop_back();
-    Node<T> insert(T value);
+    Node<T> *insert(T value);
     void erase(T value);
     Node<T> *removeFirst();
     Node<T> *removeLast();
@@ -48,7 +48,7 @@ public:
  * CONSTRUCTORES Y DESTRUCTOR
 */
 template <typename T>
-Node<T> List<T>::insert(Node<T> *current, T value)
+Node<T> *List<T>::insert(Node<T> *current, T value)
 {
     int compare = current->getData()->compare(value);
 
@@ -141,7 +141,7 @@ void List<T>::clear()
  * MODIFICADORES
 */
 template <typename T>
-Node<T> List<T>::push_front(T value)
+Node<T> *List<T>::push_front(T value)
 {
     Node<T> *node = new Node<T>(value);
 
@@ -160,7 +160,7 @@ Node<T> List<T>::push_front(T value)
 }
 
 template <typename T>
-Node<T> List<T>::push_back(T value)
+Node<T> *List<T>::push_back(T value)
 {
     Node<T> *node = new Node<T>(value);
 
@@ -217,7 +217,7 @@ void List<T>::pop_back()
 }
 
 template <typename T>
-Node<T> List<T>::insert(T value)
+Node<T> *List<T>::insert(T value)
 {
     if (isEmpty())
     {
