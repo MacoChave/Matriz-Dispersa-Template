@@ -159,12 +159,14 @@ void MatrixNode<T>::setBack(MatrixNode<T> *value)
     back = value;
 }
 
-QString MatrixNode::toString()
+template <typename T>
+QString MatrixNode<T>::toString()
 {
     return data->toString();
 }
 
-QString MatrixNode::getNodeName()
+template <typename T>
+QString MatrixNode<T>::getNodeName()
 {
     return data->getNodeName();
 }

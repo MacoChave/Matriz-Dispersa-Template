@@ -50,10 +50,13 @@ public:
 template <typename T>
 Node<T> *List<T>::insert(Node<T> *current, T value)
 {
+    if (current != NULL)
+        return NULL;
+
     int compare = current->getData()->compare(value);
 
     if (compare == 0)
-        return NULL;
+        return current;
     else
     {
         if (compare > 0)
